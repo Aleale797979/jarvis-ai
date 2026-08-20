@@ -1,1 +1,7 @@
-
+services:
+  - type: web
+    name: jarvis-ai
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --timeout 300 server:app
